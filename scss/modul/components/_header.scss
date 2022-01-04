@@ -1,0 +1,84 @@
+@use '../abstracts/colors';
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a.logo{
+    position: relative;
+    font-weight: 600;
+    color: colors.$bs-font-color;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header ul.navigation{
+    position: relative;
+    display: flex;
+}
+
+header ul.navigation li{
+    list-style: none;
+}
+
+header ul.navigation li a{
+    display: inline-block;
+    color: colors.$bs-font-color;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 8px 15px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+header ul.navigation li a.active,
+header ul.navigation li a:hover{
+    background-color: colors.$bs-scroll-bar;
+}
+
+
+@media(max-width: 900px){
+    header ul.navigation{
+        display: none;
+    }
+
+    header ul.navigation.active-navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: colors.$bs-gradient-background;
+        z-index: 10;
+        flex-direction: column;
+    }
+
+    header div.toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(../../../path/grid-sharp.svg);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 10000;
+    }
+
+    header div.toggle.active-toggle{
+        background: url(../../../path/close-circle-sharp.svg);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

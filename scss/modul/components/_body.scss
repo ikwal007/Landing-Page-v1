@@ -1,0 +1,30 @@
+@use '../abstracts/colors';
+
+body{
+    background-image: colors.$bs-gradient-background;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: colors.$bs-font-color;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: colors.$bs-scroll-bar;
+    border-radius: 4px;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

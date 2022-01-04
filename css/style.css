@@ -1,0 +1,173 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a.logo {
+  position: relative;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+header ul.navigation {
+  position: relative;
+  display: flex;
+}
+
+header ul.navigation li {
+  list-style: none;
+}
+
+header ul.navigation li a {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  margin-left: 10px;
+  padding: 8px 15px;
+  border-radius: 40px;
+  text-decoration: none;
+}
+
+header ul.navigation li a.active,
+header ul.navigation li a:hover {
+  background-color: #d65db1;
+}
+
+@media (max-width: 900px) {
+  header ul.navigation {
+    display: none;
+  }
+
+  header ul.navigation.active-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right top, #d65db1, #e861a2, #f46993, #fc7486, #ff827b, #ff8f73, #ff9d6d, #ffac69, #ffbe66, #ffd166, #ffe469, #f9f871);
+    z-index: 10;
+    flex-direction: column;
+  }
+
+  header div.toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(../../../path/grid-sharp.svg);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+  }
+
+  header div.toggle.active-toggle {
+    background: url(../../../path/close-circle-sharp.svg);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+body {
+  background-image: linear-gradient(to right top, #d65db1, #e861a2, #f46993, #fc7486, #ff827b, #ff8f73, #ff9d6d, #ffac69, #ffbe66, #ffd166, #ffe469, #f9f871);
+  font-family: "M PLUS 1 Code", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d65db1;
+  border-radius: 4px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+main.pages div.page {
+  display: none;
+}
+
+main.pages div.page.page-active {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
