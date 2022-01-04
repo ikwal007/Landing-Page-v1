@@ -1,9 +1,0 @@
-@use '../abstracts/colors';
-
-main.pages div.page{
-    display: none;
-}
-
-main.pages div.page.page-active{
-    display: block;
-}
